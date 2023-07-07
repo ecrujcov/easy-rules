@@ -312,6 +312,11 @@ public class RuleProxy implements InvocationHandler {
     private String getRuleName() {
         if (this.name == null) {
             org.jeasy.rules.annotation.Rule rule = getRuleAnnotation();
+
+            if (SmartRuleName.class.isAssignableFrom(getTargetClass())) {
+                return ((SmartRuleName)target).getSmartRuleName();
+            }
+
             this.name = rule.name().equals(Rule.DEFAULT_NAME) ? getTargetClass().getSimpleName() : rule.name();
         }
         return this.name;
