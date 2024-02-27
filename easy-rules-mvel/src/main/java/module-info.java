@@ -27,4 +27,5 @@ module org.jeasy.rules.mvel {
     requires org.slf4j;
     requires org.jeasy.rules.support;
     opens org.jeasy.rules.mvel;
+    exports org.jeasy.rules.mvel;
 }

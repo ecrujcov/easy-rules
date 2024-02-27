@@ -40,7 +40,7 @@ public class FactsTest {
         facts.put("foo", 2);
 
         assertThat(facts).hasSize(1);
-        assertThat((BigDecimal) facts.get("foo")).isEqualTo(2);
+        assertThat((int)facts.get("foo")).isEqualTo(2);
     }
 
     @Test
@@ -73,7 +73,7 @@ public class FactsTest {
     @Test
     public void get() throws Exception {
         facts.put("foo", 1);
-        assertThat((BigDecimal) facts.get("foo")).isEqualTo(1);
+        assertThat((int)facts.get("foo")).isEqualTo(1);
     }
 
     @Test
