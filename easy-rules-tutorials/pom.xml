@@ -95,8 +95,8 @@
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <verbose>true</verbose>
-                    <source>9</source>
-                    <target>9</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                     <showWarnings>true</showWarnings>
                 </configuration>
             </plugin>
